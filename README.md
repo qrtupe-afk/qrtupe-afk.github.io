@@ -1,0 +1,1 @@
+# qrtupe-afk.github.io
