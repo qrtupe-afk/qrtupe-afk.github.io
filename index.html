@@ -318,87 +318,6 @@
             border-radius: 2px;
         }
 
-        /* News Section */
-        .news-container {
-            display: grid;
-            grid-template-columns: 2fr 1fr;
-            gap: 40px;
-        }
-
-        .main-news {
-            background: var(--card-bg);
-            border-radius: 20px;
-            overflow: hidden;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
-            backdrop-filter: blur(10px);
-            border: 1px solid rgba(255, 255, 255, 0.1);
-            transform-style: preserve-3d;
-            transform: perspective(1000px);
-            opacity: 0;
-        }
-
-        .main-news-img {
-            width: 100%;
-            height: 350px;
-            object-fit: cover;
-            transition: all 0.5s ease;
-        }
-
-        .main-news:hover .main-news-img {
-            transform: scale(1.03);
-        }
-
-        .main-news-content {
-            padding: 30px;
-        }
-
-        .main-news h3 {
-            font-size: 2rem;
-            margin-bottom: 20px;
-            line-height: 1.3;
-        }
-
-        .news-list {
-            display: flex;
-            flex-direction: column;
-            gap: 25px;
-        }
-
-        .news-item {
-            background: var(--card-bg);
-            border-radius: 15px;
-            padding: 25px;
-            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
-            display: flex;
-            gap: 20px;
-            transition: all 0.3s ease;
-            backdrop-filter: blur(10px);
-            border: 1px solid rgba(255, 255, 255, 0.05);
-            opacity: 0;
-        }
-
-        .news-item:hover {
-            transform: translateX(10px);
-            box-shadow: 0 10px 25px rgba(108, 99, 255, 0.2);
-        }
-
-        .news-item-img {
-            width: 120px;
-            height: 90px;
-            object-fit: cover;
-            border-radius: 10px;
-            transition: all 0.3s ease;
-        }
-
-        .news-item:hover .news-item-img {
-            transform: scale(1.1);
-        }
-
-        .news-item-content h4 {
-            margin-bottom: 10px;
-            font-size: 1.2rem;
-        }
-
         /* Video Section */
         .video-container {
             display: grid;
@@ -542,10 +461,6 @@
 
         /* Responsive Styles */
         @media (max-width: 1100px) {
-            .news-container {
-                grid-template-columns: 1fr;
-            }
-
             .video-container {
                 grid-template-columns: 1fr;
             }
@@ -597,15 +512,6 @@
             .hero h2 {
                 font-size: 2.2rem;
             }
-
-            .news-item {
-                flex-direction: column;
-            }
-
-            .news-item-img {
-                width: 100%;
-                height: 150px;
-            }
         }
     </style>
 </head>
@@ -627,7 +533,6 @@
                 </button>
                 <nav>
                     <ul>
-                        <li><a href="#news">Новости</a></li>
                         <li><a href="#videos">Видео</a></li>
                     </ul>
                 </nav>
@@ -649,52 +554,6 @@
             <div class="floating-element"></div>
             <div class="floating-element"></div>
             <div class="floating-element"></div>
-        </div>
-    </section>
-
-    <!-- News Section -->
-    <section id="news">
-        <div class="container">
-            <div class="section-title">
-                <h2>Новости</h2>
-            </div>
-            <div class="news-container">
-                <div class="main-news">
-                    <img src="/images/ФОТО ИЗ ПАРКА.JPG"
-                        alt="ИИ технологии" class="main-news-img">
-                    <div class="main-news-content">
-                        <h3>УЖЕ 18 ОКТЯБРЯ - ПРОЙДЕТ САМЫЙ МАСШТАБНЫЙ СТРИМ 🤩</h3>
-                        <p>В 12:30 мы выезжаем в город, где и проведем масштабный стрим. Парк, качалка и многое другое.</p>
-                        <a href="#" class="btn" style="margin-top: 20px;">Читать полностью</a>
-                    </div>
-                </div>
-                <div class="news-list">
-                    <div class="news-item">
-                        <img src="/images/НОЧНЫЕ ПРИКЛ 6.jpg"
-                            alt="НОЧНЫЕ ПРИКЛЮЧЕНИЯ 6" class="news-item-img">
-                        <div class="news-item-content">
-                            <h4>НОЧНЫЕ ПРИКЛЮЧЕНИЯ 6</h4>
-                            <p>17 октября, прошел шестой сон Никиты в прямом эфире.</p>
-                        </div>
-                    </div>
-                    <div class="news-item">
-                        <img src="/images/ФОТО С ВОКЗАЛА.jpg"
-                            alt="СУЕТА ВОКЗАЛ" class="news-item-img">
-                        <div class="news-item-content">
-                            <h4>НАВОДИМ СУЕТУ НА ВОКЗАЛЕ</h4>
-                            <p>17 октября, мы провели стрим на вокзале и по пути домой.</p>
-                        </div>
-                    </div>
-                    <div class="news-item">
-                        <img src="/images/ФОТО НА РЕЧКЕ,ОДИН.jpg"
-                            alt="НАВОДИМ СУЕТУ НА РАЙОНЕ" class="news-item-img">
-                        <div class="news-item-content">
-                            <h4>НАВОДИМ СУЕТУ НА РАЙОНЕ</h4>
-                            <p>12 октября, прошёл веселый день в прямом эфире.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
         </div>
     </section>
 
@@ -891,17 +750,16 @@
                 <div class="footer-column">
                     <h3>Разделы</h3>
                     <ul>
-                        <li><a href="#news">Новости</a></li>
                         <li><a href="#videos">Видео</a></li>
                     </ul>
                 </div>
                 <div class="footer-column">
                     <h3>Популярные темы</h3>
                     <ul>
-                        <li><a href="http://t.me/nesoqiton">Telegram [Никита]</a></li>
-                        <li><a href="http://t.me/Legendary_7681">Telegram [Евгений]</a></li>
-                        <li><a href="http://t.me/thanoslegenda1239">Telegram [Ольга]</a></li>
-                        <li><a href="http://t.me/+LqoFaAvLl9hmOTdi">TG Channel [Кружки далбаебов]</a></li>
+                        <li><a href="https://t.me/nesoqiton">Telegram [Никита]</a></li>
+                        <li><a href="https://t.me/Legendary_7681">Telegram [Евгений]</a></li>
+                        <li><a href="https://t.me/thanoslegenda1239">Telegram [Ольга]</a></li>
+                        <li><a href="https://t.me/+LqoFaAvLl9hmOTdi">TG Channel [Кружки далбаебов]</a></li>
                     </ul>
                 </div>
                 <div class="footer-column">
@@ -961,7 +819,7 @@
         });
 
         // Animate elements on scroll
-        gsap.utils.toArray('.main-news, .video-card, .news-item').forEach(element => {
+        gsap.utils.toArray('.video-card').forEach(element => {
             gsap.fromTo(element, {
                 opacity: 0,
                 y: 50
@@ -1053,9 +911,4 @@
         });
     </script>
 </body>
-
-
 </html>
-
-
-
