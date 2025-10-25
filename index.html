@@ -318,6 +318,105 @@
             border-radius: 2px;
         }
 
+        /* YouTube Channel Section */
+        .youtube-channel-section {
+            text-align: center;
+        }
+
+        .youtube-channel-card {
+            background: var(--card-bg);
+            border-radius: 20px;
+            padding: 40px;
+            max-width: 600px;
+            margin: 0 auto;
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+            opacity: 0;
+        }
+
+        .channel-avatar {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            margin: 0 auto 25px;
+            background: var(--gradient);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+            border: 4px solid var(--accent1);
+        }
+
+        .channel-avatar img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .channel-avatar .placeholder {
+            font-size: 3rem;
+            color: white;
+        }
+
+        .channel-name {
+            font-size: 2.2rem;
+            margin-bottom: 15px;
+            color: var(--accent1);
+        }
+
+        .channel-description {
+            font-size: 1.1rem;
+            margin-bottom: 30px;
+            color: var(--text-secondary);
+            line-height: 1.6;
+        }
+
+        .youtube-stats {
+            display: flex;
+            justify-content: space-around;
+            margin: 30px 0;
+        }
+
+        .stat {
+            text-align: center;
+        }
+
+        .stat-number {
+            font-size: 2.2rem;
+            font-weight: 700;
+            background: var(--gradient);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .stat-label {
+            font-size: 0.95rem;
+            color: var(--text-secondary);
+            margin-top: 5px;
+        }
+
+        .youtube-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 12px;
+            background: #ff0000;
+            color: white;
+            padding: 15px 35px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            margin-top: 15px;
+            font-size: 1.1rem;
+        }
+
+        .youtube-btn:hover {
+            background: #cc0000;
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(255, 0, 0, 0.4);
+        }
+
         /* Video Section */
         .video-container {
             display: grid;
@@ -506,11 +605,29 @@
                 height: auto;
                 min-height: 100vh;
             }
+            
+            .youtube-stats {
+                flex-direction: column;
+                gap: 20px;
+            }
+            
+            .channel-avatar {
+                width: 120px;
+                height: 120px;
+            }
+            
+            .channel-name {
+                font-size: 1.8rem;
+            }
         }
 
         @media (max-width: 576px) {
             .hero h2 {
                 font-size: 2.2rem;
+            }
+            
+            .youtube-channel-card {
+                padding: 30px 20px;
             }
         }
     </style>
@@ -533,6 +650,7 @@
                 </button>
                 <nav>
                     <ul>
+                        <li><a href="#youtube">Мой канал</a></li>
                         <li><a href="#videos">Видео</a></li>
                     </ul>
                 </nav>
@@ -555,6 +673,45 @@
             <div class="floating-element"></div>
             <div class="floating-element"></div>
             <div class="floating-element"></div>
+        </div>
+    </section>
+
+    <!-- YouTube Channel Section -->
+    <section id="youtube">
+        <div class="container">
+            <div class="section-title">
+                <h2><i class="fab fa-youtube"></i> Наш YouTube канал</h2>
+            </div>
+            <div class="youtube-channel-section">
+                <div class="youtube-channel-card">
+                    <div class="channel-avatar" id="channel-avatar">
+                        <div class="placeholder">
+                        </div>
+                    </div>
+                    <h2 class="channel-name" id="channel-name">Nikolay Rasetovich</h2>
+                    <p class="channel-description" id="channel-description">
+                        Два брата и одна девочка в самых веселых и безумных приключениях! 
+                        Стримы, вайны, смех и настоящие эмоции.
+                    </p>
+                    <div class="youtube-stats">
+                        <div class="stat">
+                            <div class="stat-number" id="subscribers">1000+</div>
+                            <div class="stat-label">подписчиков</div>
+                        </div>
+                        <div class="stat">
+                            <div class="stat-number" id="videos-count">50+</div>
+                            <div class="stat-label">видео</div>
+                        </div>
+                        <div class="stat">
+                            <div class="stat-number" id="views">10k+</div>
+                            <div class="stat-label">просмотров</div>
+                        </div>
+                    </div>
+                    <a href="https://www.youtube.com/@n1kolayrasetovich" class="youtube-btn" target="_blank" id="channel-link">
+                        <i class="fab fa-youtube"></i> Перейти на канал
+                    </a>
+                </div>
+            </div>
         </div>
     </section>
 
@@ -824,11 +981,14 @@
                     <h3>Блог братьев</h3>
                     <p>Два брата и одна девочка</p>
                     <div class="social-links">
+                        <a href="https://www.youtube.com/@n1kolayrasetovich" target="_blank"><i class="fab fa-youtube"></i></a>
+                        <a href="https://t.me/nesoqiton" target="_blank"><i class="fab fa-telegram"></i></a>
                     </div>
                 </div>
                 <div class="footer-column">
                     <h3>Разделы</h3>
                     <ul>
+                        <li><a href="#youtube">Мой канал</a></li>
                         <li><a href="#videos">Видео</a></li>
                     </ul>
                 </div>
@@ -898,7 +1058,7 @@
         });
 
         // Animate elements on scroll
-        gsap.utils.toArray('.video-card').forEach(element => {
+        gsap.utils.toArray('.video-card, .youtube-channel-card').forEach(element => {
             gsap.fromTo(element, {
                 opacity: 0,
                 y: 50
@@ -914,6 +1074,34 @@
                 }
             });
         });
+
+        // YouTube Channel Data (Замените на данные вашего канала)
+        function loadYouTubeChannelData() {
+            // Замените эти данные на реальные данные вашего канала
+            const channelData = {
+                name: "Nikolay Rasetovich",
+                avatar: "https://yt3.googleusercontent.com/Fkj4adwYCXoQo7sSkdAKB6H6thbrmEV3YtXgaD2VQs4KUMo2UNjxhD9dCq6Yi8sMgoDbJGO-NA=s160-c-k-c0x00ffffff-no-rj", // Замените на URL аватарки канала
+                description: "Два брата и одна девочка в самых веселых и безумных приключениях! Стримы, вайны, смех и настоящие эмоции",
+                subscribers: "12",
+                videosCount: "21",
+                views: "≈ 245",
+                channelUrl: "https://www.youtube.com/@n1kolayrasetovich" // Замените на реальную ссылку
+            };
+
+            // Обновляем данные на странице
+            document.getElementById('channel-name').textContent = channelData.name;
+            document.getElementById('channel-description').textContent = channelData.description;
+            document.getElementById('subscribers').textContent = channelData.subscribers;
+            document.getElementById('videos-count').textContent = channelData.videosCount;
+            document.getElementById('views').textContent = channelData.views;
+            document.getElementById('channel-link').href = channelData.channelUrl;
+
+            // Загружаем аватарку
+            const avatarContainer = document.getElementById('channel-avatar');
+            if (channelData.avatar) {
+                avatarContainer.innerHTML = `<img src="${channelData.avatar}" alt="${channelData.name}" onerror="this.style.display='none'; this.parentElement.innerHTML='<div class=\"placeholder\"></i></div>'">`;
+            }
+        }
 
         // 3D Background with Three.js
         function initThreeBackground() {
@@ -965,8 +1153,11 @@
             });
         }
 
-        // Initialize 3D background
-        initThreeBackground();
+        // Initialize functions when page loads
+        window.addEventListener('DOMContentLoaded', function() {
+            initThreeBackground();
+            loadYouTubeChannelData();
+        });
 
         // Smooth scrolling for anchor links
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
