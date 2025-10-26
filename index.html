@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="ru_RU">
 
 <head>
     <meta charset="UTF-8">
@@ -365,37 +365,6 @@
             color: var(--accent1);
         }
 
-        .channel-description {
-            font-size: 1.1rem;
-            margin-bottom: 30px;
-            color: var(--text-secondary);
-            line-height: 1.6;
-        }
-
-        .youtube-stats {
-            display: flex;
-            justify-content: space-around;
-            margin: 30px 0;
-        }
-
-        .stat {
-            text-align: center;
-        }
-
-        .stat-number {
-            font-size: 2.2rem;
-            font-weight: 700;
-            background: var(--gradient);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-        }
-
-        .stat-label {
-            font-size: 0.95rem;
-            color: var(--text-secondary);
-            margin-top: 5px;
-        }
-
         .youtube-btn {
             display: inline-flex;
             align-items: center;
@@ -606,11 +575,6 @@
                 min-height: 100vh;
             }
             
-            .youtube-stats {
-                flex-direction: column;
-                gap: 20px;
-            }
-            
             .channel-avatar {
                 width: 120px;
                 height: 120px;
@@ -689,24 +653,6 @@
                         </div>
                     </div>
                     <h2 class="channel-name" id="channel-name">Nikolay Rasetovich</h2>
-                    <p class="channel-description" id="channel-description">
-                        Два брата и одна девочка в самых веселых и безумных приключениях! 
-                        Стримы, вайны, смех и настоящие эмоции.
-                    </p>
-                    <div class="youtube-stats">
-                        <div class="stat">
-                            <div class="stat-number" id="subscribers">1000+</div>
-                            <div class="stat-label">подписчиков</div>
-                        </div>
-                        <div class="stat">
-                            <div class="stat-number" id="videos-count">50+</div>
-                            <div class="stat-label">видео</div>
-                        </div>
-                        <div class="stat">
-                            <div class="stat-number" id="views">10k+</div>
-                            <div class="stat-label">просмотров</div>
-                        </div>
-                    </div>
                     <a href="https://www.youtube.com/@n1kolayrasetovich" class="youtube-btn" target="_blank" id="channel-link">
                         <i class="fab fa-youtube"></i> Перейти на канал
                     </a>
@@ -1120,19 +1066,11 @@
             const channelData = {
                 name: "Nikolay Rasetovich",
                 avatar: "https://yt3.googleusercontent.com/Fkj4adwYCXoQo7sSkdAKB6H6thbrmEV3YtXgaD2VQs4KUMo2UNjxhD9dCq6Yi8sMgoDbJGO-NA=s160-c-k-c0x00ffffff-no-rj", // Замените на URL аватарки канала
-                description: "Два брата и одна девочка в самых веселых и безумных приключениях! Стримы, вайны, смех и настоящие эмоции",
-                subscribers: "12",
-                videosCount: "23",
-                views: "≈ 284",
                 channelUrl: "https://www.youtube.com/@n1kolayrasetovich" // Замените на реальную ссылку
             };
 
             // Обновляем данные на странице
             document.getElementById('channel-name').textContent = channelData.name;
-            document.getElementById('channel-description').textContent = channelData.description;
-            document.getElementById('subscribers').textContent = channelData.subscribers;
-            document.getElementById('videos-count').textContent = channelData.videosCount;
-            document.getElementById('views').textContent = channelData.views;
             document.getElementById('channel-link').href = channelData.channelUrl;
 
             // Загружаем аватарку
@@ -1220,5 +1158,4 @@
         });
     </script>
 </body>
-
 </html>
